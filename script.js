@@ -239,3 +239,201 @@
 // console.log('ageGt',ageGt)
 
 
+
+//function Declaration
+
+// function sum(a,b){
+
+//     return a+b
+// }
+
+// var k=sum(10,20)
+
+// console.log('12',k)
+
+//function expression
+
+// var b=function(num){
+
+//     return num*num
+// }
+
+// var z=b(10)
+
+// console.log('z',z)
+
+
+//function passing as argument
+
+
+// function x(y){
+
+//     console.log('x called')
+//    y()
+// }
+
+// x(function y(){
+
+//     console.log('y called')
+// })
+
+
+//Returning the value of function
+
+
+// function x(){
+
+//    return  function y(){
+
+//     console.log('y is called')
+
+//     }
+// }
+
+// x()()
+
+
+//IIFE(immediately invoked function expression)
+
+// x()()
+
+//scopes in javascript
+
+
+//function scope
+
+// function hello(){
+
+//     var a=20;
+
+//     function hai(){
+
+//         var b=220;
+
+//         function hii(){
+           
+//             console.log(a+b)
+//         }
+
+//         hii()
+//     }
+
+//     hai()
+// }
+
+// hello()
+
+
+// prints 5 each seconds
+
+// for(var i=0;i<5;i++){
+
+//     setTimeout(function(){
+
+//         console.log(i)
+
+//     },i*1000)
+
+// }
+
+// // prints i each seconds
+
+// for(let i=0;i<5;i++){
+
+//     setTimeout(function(){
+
+//         console.log(i)
+
+//     },i*1000)
+
+// }
+
+// prints 5 each seconds
+
+
+
+// for(var i=0;i<5;i++){
+
+//     function close(i){
+//     setTimeout(function(){
+
+//         console.log(i)
+
+//     },i*1000)
+//     }
+
+//     close(i)
+
+// }
+
+///spread vs rest operator
+
+
+
+// const arr=[2,3,4,5]
+
+
+// displayAll(...arr)
+
+
+// function displayAll(...arr){
+
+//     console.log('arr',arr)
+// }
+
+
+// //rest operator in detail
+
+
+// function restOper(a,b,c,...numbers){
+
+// console.log('a,b,c,num',a,b,c,numbers)
+// }
+
+
+// restOper(4,5,6,7,7,55,65)
+
+
+//closuress chain
+
+
+// function createBase(num){
+
+//     return function (x){
+
+
+//         console.log (x+num)
+
+//     }
+
+    
+// }
+
+//  var addSix=createBase(6)
+
+//    addSix(21)
+
+///closures iptimazation
+
+function find(index){
+
+    let a=[]
+
+    for(let i=0;i<100000;i++){
+
+        a[i]=i+1
+    }
+
+
+    return  function (index){
+
+
+    a[index]
+
+    }
+}
+
+
+  var closures=find()
+
+  closures(10)
